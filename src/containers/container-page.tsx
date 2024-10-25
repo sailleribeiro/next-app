@@ -5,7 +5,7 @@ interface ContainerPageProps {
 }
 
 const ContainerPage: React.FC<ContainerPageProps> = ({ children }) => {
-  return <div className="p-4 h-full">{children}</div>;
+  return <div className="p-8 h-screen">{children}</div>;
 };
 
 export default ContainerPage;
