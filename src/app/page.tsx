@@ -1,8 +1,10 @@
 "use client";
 
+import { ModeToggle } from "@/components/themes/theme-mode";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useUtils } from "@/lib/utils";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   const { router } = useUtils();
@@ -12,10 +14,13 @@ export default function Home() {
         <div className="flex items-start justify-start w-full">
           <h1 className="text-3xl font-bold">Login</h1>
         </div>
-
         <Input placeholder="Email" type="email" />
         <Input placeholder="Senha" type="password" />
-        <Button onClick={() => router.push("/dashboard")}>Entrar</Button>
+        <Button onClick={() => router.push("/dashboard")}>
+          <ArrowTopRightIcon />
+          Entrar
+        </Button>
+        <ModeToggle />
       </main>
     </div>
   );
