@@ -1,14 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { useUtils } from "@/lib/utils";
 import React from "react";
 
 const Dashboard: React.FC = () => {
-  const router = useRouter();
+  const { router } = useUtils();
   return (
     <div>
       <h1>Dashboard Page</h1>
-      <Button onClick={() => router.push("/login")}>go Login page</Button>
+      <Button onClick={() => router.push("/")}>Sair</Button>
     </div>
   );
 };
