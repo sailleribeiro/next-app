@@ -8,12 +8,18 @@ import React from "react";
 const Dashboard: React.FC = () => {
   const { router } = useUtils();
   return (
-    <ContainerPage>
-      <div className="flex w-full items-center justify-end gap-2 ">
-        <Button onClick={() => router.push("/")}>Sair</Button>
-        <ModeToggle />
-      </div>
-    </ContainerPage>
+    <>
+      <ContainerPage>
+        <header className="flex w-full items-center justify-between">
+          <h1 className="text-3xl font-bold">Dashboards</h1>
+
+          <div className="flex items-center gap-2">
+            <Button onClick={() => router.push("/")}>Sair</Button>
+            <ModeToggle />
+          </div>
+        </header>
+      </ContainerPage>
+    </>
   );
 };
 
